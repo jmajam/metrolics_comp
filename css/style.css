@@ -259,11 +259,6 @@ textarea {
     background-color: var(--main-bg-color);
 }
 
-.page__header__container {
-    display: flex;
-    justify-content: center;
-}
-
 /* Navigation bar */
 .page__header__navbar {
     display: flex;
@@ -399,4 +394,18 @@ textarea {
 
 .header__carousel__button.next {
     right: 4.5rem;
+}
+
+/* Header Introduction */
+.introduction {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 34px;
+    font-weight: 400;
+    width: 70%;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.introduction span {
+    color: #1eafde;
 }
