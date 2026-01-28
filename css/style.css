@@ -260,7 +260,6 @@ textarea {
 }
 
 .page__header__content {
-    width: 70%;
 }
 
 /* Navigation bar */
@@ -269,6 +268,8 @@ textarea {
     justify-content: space-between;
     align-items: stretch;
     height: 96px;
+    margin: 0 auto;
+    width: 70%;
 }
 
 /* Menu list */
