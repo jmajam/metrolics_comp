@@ -92,3 +92,6 @@ pinegrow.json
 
 # Blender
 *.blend1
+
+#ignore images folder
+/img

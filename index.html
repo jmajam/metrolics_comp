@@ -17,7 +17,15 @@
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="icon.png" />
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+            rel="stylesheet"
+        />
+
         <link rel="manifest" href="site.webmanifest" />
+        <link rel="stylesheet" href="css/style.css" />
         <meta name="theme-color" content="#fafafa" />
     </head>
 
@@ -26,9 +34,10 @@
         <header class="page__header">
             <div class="page__header__container">
                 <div class="page__header__content">
-                    <h1>Metrolics</h1>
-                    <img alt="metrolics logo" src="" />
-                    <nav>
+                    <nav class="page__header__navbar">
+                        <div class="page__header__logo">
+                            <img alt="metrolics logo" src="img/svg/Logo.svg" />
+                        </div>
                         <ul>
                             <li>Home</li>
                             <li>Portfolio</li>
@@ -40,6 +49,7 @@
                     <div class="imageContainer">
                         <img
                             class="imageContainer__image"
+                            src="img/png/banner_1.png"
                             alt="minions hanging in front of clouds with company slogan"
                         />
                     </div>
