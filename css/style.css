@@ -254,36 +254,47 @@ textarea {
     --main-bg-color: #ffffff;
 }
 
-/* Page layout */
+/* Page Layout */
 .page {
     background-color: var(--main-bg-color);
 }
 
-/* Navigation bar */
+/* Navigation Bar */
 .page__header__navbar {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
     height: 96px;
-    margin: 0 auto;
     width: 70%;
+    margin: 0 auto;
 }
 
-/* Menu list */
+.page__header__logo {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    gap: 0.5rem;
+}
+
+.page__header__logo img {
+    display: block;
+    width: 177px;
+    align-self: flex-end;
+}
+
+/* Menu List */
 .page__header__navbar ul {
     display: flex;
     height: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
-
     font-family: "Ubuntu", sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: white;
 }
 
-/* Menu items */
 .page__header__navbar li {
     display: flex;
     align-items: flex-end;
@@ -292,7 +303,7 @@ textarea {
     box-sizing: border-box;
 }
 
-/* Menu item colors */
+/* Menu Item Colors */
 .page__header__navbar li:nth-child(1) {
     background-color: #25c389;
 }
@@ -309,31 +320,15 @@ textarea {
     background-color: #265787;
 }
 
-/* Logo block */
-.page__header__logo {
-    display: flex;
-    align-items: flex-end;
-    height: 100%;
-    gap: 0.5rem;
-}
-
-.page__header__logo img {
-    display: block;
-    width: 177px;
-    align-self: flex-end;
-}
-
 /* Header Carousel */
 .imageContainer {
     position: relative;
     width: 100%;
     margin: auto;
-
     background-color: #ebebeb;
     overflow: hidden;
 }
 
-/* New wrapper to anchor text positioning */
 .imageWrapper {
     position: relative;
     width: 70%;
@@ -345,7 +340,7 @@ textarea {
     display: block;
 }
 
-/* Floating text boxes — now relative to imageWrapper */
+/* Carousel Text Boxes */
 .carousel-text {
     position: absolute;
     left: 2rem;
@@ -360,20 +355,20 @@ textarea {
 
 .carousel-text.blue {
     top: 20%;
-    border-left: 7px #186aa2 solid;
+    border-left: 7px solid #186aa2;
 }
 
 .carousel-text.red {
     top: 35%;
-    border-left: 7px #de6262 solid;
+    border-left: 7px solid #de6262;
 }
 
 .carousel-text.yellow {
     top: 50%;
-    border-left: 7px #ffb901 solid;
+    border-left: 7px solid #ffb901;
 }
 
-/* Carousel buttons — still relative to full container */
+/* Carousel Buttons */
 .header__carousel__button {
     position: absolute;
     top: 50%;
