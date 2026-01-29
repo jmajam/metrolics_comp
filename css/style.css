@@ -689,10 +689,10 @@ textarea {
 }
 
 /* Track Us */
-
 .footer__information__trackUs {
     width: 14%;
 }
+
 .footer__information__trackUs__social__container {
     display: flex;
     flex-wrap: wrap;
@@ -705,8 +705,52 @@ textarea {
     margin: 1% 0;
     display: flex;
 }
+
 .footer__information__trackUs__social__image {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+}
+
+/* Track Us Form */
+.footer__information__trackUs__form {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
+    height: 32px;
+    overflow: hidden;
+    margin-top: 0.25rem;
+}
+
+.footer__information__trackUs__form input[type="email"] {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 100%;
+    padding: 0 0.25rem;
+    background-color: #ff4f87;
+    color: white;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 11px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.footer__information__trackUs__form input::placeholder {
+    color: white;
+}
+
+.footer__information__trackUs__form button {
+    flex: 0 0 auto;
+    height: 100%;
+    background-color: #ffb901;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 11px;
+    line-height: 1;
 }
