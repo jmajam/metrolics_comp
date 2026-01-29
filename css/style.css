@@ -414,6 +414,7 @@ textarea {
 }
 .services {
     width: 70%;
+    margin-bottom: 2em;
 }
 
 /* Headers */
@@ -432,4 +433,39 @@ textarea {
     text-align: center;
     margin-top: 0;
     color: #a3a3a3;
+}
+
+/* Services */
+.services__card__image {
+    width: 84px;
+}
+
+.services__card__heading {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    margin: 1em auto;
+}
+
+.services__card__description {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #939393;
+    margin: 0 auto;
+}
+
+.services__card__container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.services__card {
+    width: 22%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
