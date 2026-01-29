@@ -672,3 +672,16 @@ textarea {
     width: 22%;
     aspect-ratio: 1/1;
 }
+
+/* Mastodon */
+.footer__information__newMastodon {
+    width: 31%;
+}
+.footer__information__newMastodon__author {
+    color: #1bade6;
+}
+.footer__information__newMastodon__content {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 9px;
+}
