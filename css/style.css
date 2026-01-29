@@ -583,3 +583,92 @@ textarea {
     width: 100%;
     height: 100%;
 }
+
+/* Footer */
+.page__footer {
+    background-color: #0e2e4e;
+    color: white;
+}
+
+.page__footer__container {
+    display: flex;
+    justify-content: center;
+}
+
+.page__footer__content {
+    width: 70%;
+}
+
+.founder {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 70%;
+    max-width: none;
+    margin: 2em 0 0 0;
+    justify-content: flex-start;
+}
+
+.founder__image {
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.founder__description {
+    font-family: "Ubuntu", sans-serif;
+    font-family: 400;
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.founder__text__line {
+    width: 21%;
+    border: none;
+    border-top: 4px solid #ffb901;
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+.footer__information {
+    display: flex;
+}
+
+.footer__information__header {
+    font-family: "Ubuntu", sans-serif;
+    font-family: 500;
+    font-size: 15px;
+    margin-bottom: 0.5rem;
+}
+
+/* About us */
+
+.footer__information__aboutUs {
+    width: 22%;
+    margin-top: 2em;
+}
+
+.footer__information__aboutUs__line {
+    margin-top: 0;
+    border: none;
+    border-top: 4px solid #21c183;
+}
+
+.footer__information__aboutUs__text {
+    font-family: "Ubuntu", sans-serif;
+    font-family: 400;
+    font-size: 12px;
+}
+
+/* Instagram */
+.footer__information__instagram {
+    width: 22%;
+}
+
+.footer__information__instagram__post {
+    width: 22%;
+    aspect-ratio: 1/1;
+}
