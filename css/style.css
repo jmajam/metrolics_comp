@@ -407,10 +407,6 @@ textarea {
 
 /* Services */
 
-.services {
-    margin-bottom: 2em;
-}
-
 /* Headers */
 .header {
     font-family: "Ubuntu", sans-serif;
@@ -439,6 +435,7 @@ textarea {
 
 .page__main__content > * {
     width: 100%;
+    margin-bottom: 2em;
 }
 .page__main__container {
     display: flex;
@@ -483,13 +480,14 @@ textarea {
 /* Latest Work */
 
 .latestWork__post__container {
-    height: 72%;
+    height: auto;
     display: flex;
     justify-content: space-between;
 }
 
 .latestWork__post {
     width: 31%;
+    aspect-ratio: 5 / 4;
     position: relative;
 }
 
@@ -518,6 +516,7 @@ textarea {
 .latestWork__post__image {
     width: 100%;
     height: 100%;
+    aspect-ratio: 5 / 4;
     top: 0;
 }
 .latestWork__post__title {
@@ -550,4 +549,21 @@ textarea {
     padding: 0 0.5rem;
     align-items: center;
     background-color: #19b2de;
+}
+
+/* Portfolio */
+
+.portfolio__post__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+.portfolio__post {
+    width: 31%;
+    aspect-ratio: 5 / 4;
+}
+.portfolio__post__image {
+    width: 100%;
+    height: 100%;
 }
