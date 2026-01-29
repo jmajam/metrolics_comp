@@ -635,6 +635,7 @@ textarea {
 /* Footer */
 .footer__information {
     display: flex;
+    justify-content: space-between;
 }
 
 .footer__information__header {
@@ -684,4 +685,27 @@ textarea {
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-size: 9px;
+}
+
+/* Track Us */
+
+.footer__information__trackUs {
+    width: 14%;
+}
+.footer__information__trackUs__social__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 0.25rem;
+}
+
+.footer__information__trackUs__social {
+    width: 22%;
+    margin: 1% 0;
+    display: flex;
+}
+.footer__information__trackUs__social__image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
