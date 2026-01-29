@@ -636,6 +636,7 @@ textarea {
 .footer__information {
     display: flex;
     justify-content: space-between;
+    margin-top: 1.5em;
 }
 
 .footer__information__header {
@@ -669,7 +670,8 @@ textarea {
 }
 
 .footer__information__instagram__post {
-    width: 22%;
+    width: 27%;
+    margin: 1% 0;
     aspect-ratio: 1/1;
 }
 
