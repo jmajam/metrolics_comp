@@ -637,6 +637,7 @@ textarea {
     display: flex;
     justify-content: space-between;
     margin-top: 1.5em;
+    margin-bottom: 0.5rem;
 }
 
 .footer__information__header {
