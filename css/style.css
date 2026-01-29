@@ -646,16 +646,26 @@ textarea {
     margin-bottom: 0.5rem;
 }
 
+.footer__information__line {
+    margin-top: 0;
+    border: none;
+}
+
+.green__line {
+    border-top: 4px solid #21c183;
+}
+
+.blue__line {
+    border-top: 4px solid #19b2de;
+}
+
+.orange__line {
+    border-top: 4px solid #ffb901;
+}
 /* About us */
 
 .footer__information__aboutUs {
     width: 22%;
-}
-
-.footer__information__aboutUs__line {
-    margin-top: 0;
-    border: none;
-    border-top: 4px solid #21c183;
 }
 
 .footer__information__aboutUs__text {
