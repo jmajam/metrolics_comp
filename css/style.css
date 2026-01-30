@@ -588,6 +588,7 @@ textarea {
 .page__footer {
     background-color: #0e2e4e;
     color: white;
+    position: relative;
 }
 
 .page__footer__container {
@@ -647,21 +648,47 @@ textarea {
     margin-bottom: 0.5rem;
 }
 
+.footer__information__header {
+    position: relative;
+}
+.footer__information__header::after {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    transform: translate(-50%, 50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 12px solid red;
+}
+
 .footer__information__line {
     margin-top: 0;
     border: none;
 }
 
 .green__line {
-    border-top: 4px solid #21c183;
+    border-bottom: 4px solid #21c183;
+}
+
+.green__line::after {
+    border-top: 12px solid #21c183;
 }
 
 .blue__line {
-    border-top: 4px solid #19b2de;
+    border-bottom: 4px solid #19b2de;
+}
+
+.blue__line::after {
+    border-top: 12px solid #19b2de;
 }
 
 .orange__line {
-    border-top: 4px solid #ffb901;
+    border-bottom: 4px solid #ffb901;
+}
+
+.orange__line::after {
+    border-top: 12px solid #ffb901;
 }
 /* About us */
 
