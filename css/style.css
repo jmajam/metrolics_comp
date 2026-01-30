@@ -245,7 +245,7 @@ textarea {
 }
 
 /* ==========================================================================
-   2. LAYOUT
+   GRID
    ========================================================================== */
 
 /* Helper to display empty layout containers*/
@@ -339,8 +339,83 @@ textarea {
     }
 }
 
-:root {
-    --main-bg-color: #ffffff;
+/* ==========================================================================
+   PAGE LAYOUT
+   ========================================================================== */
+
+.page {
+    background: var(--white);
+}
+
+.page__header__navbar,
+.page__main__content,
+.page__footer__content,
+.imageWrapper {
+    width: var(--page-width);
+    margin: 0 auto;
+}
+
+.page__main__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page__main__content > * {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+.page__header__navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 96px;
+}
+
+.page__header__logo {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.page__header__logo img {
+    width: 177px;
+}
+
+.page__header__navbar ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.page__header__navbar li {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 1rem;
+}
+
+.page__header__navbar li:nth-child(1) {
+    background: var(--green);
+}
+.page__header__navbar li:nth-child(2) {
+    background: var(--yellow);
+}
+.page__header__navbar li:nth-child(3) {
+    background: var(--red);
+}
+.page__header__navbar li:nth-child(4) {
+    background: var(--blue);
+}
+.page__header__navbar li:nth-child(5) {
+    background: #265787;
 }
 
 /* Page Layout */
