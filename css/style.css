@@ -733,8 +733,6 @@ textarea {
 
 /* Footer */
 .footer__information {
-    display: flex;
-    justify-content: space-between;
     margin-top: 1.5em;
     margin-bottom: 0.5rem;
 }
@@ -789,11 +787,6 @@ textarea {
     border-top: 12px solid #ffb901;
 }
 /* About us */
-
-.footer__information__aboutUs {
-    width: 22%;
-}
-
 .footer__information__aboutUs__text {
     font-family: "Ubuntu", sans-serif;
     font-family: 400;
@@ -801,10 +794,6 @@ textarea {
 }
 
 /* Instagram */
-.footer__information__instagram {
-    width: 22%;
-}
-
 .footer__information__instagram__post {
     width: 27%;
     margin: 1% 0;
@@ -812,9 +801,6 @@ textarea {
 }
 
 /* Mastodon */
-.footer__information__newMastodon {
-    width: 31%;
-}
 .footer__information__newMastodon__author {
     color: #1bade6;
 }
@@ -825,10 +811,6 @@ textarea {
 }
 
 /* Track Us */
-.footer__information__trackUs {
-    width: 14%;
-}
-
 .footer__information__trackUs__social__container {
     display: flex;
     flex-wrap: wrap;
