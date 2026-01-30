@@ -589,6 +589,29 @@ textarea {
     background-color: #0e2e4e;
     color: white;
     position: relative;
+    padding-bottom: 2rem;
+}
+
+.page__footer::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 15rem;
+    height: 1rem;
+    background: linear-gradient(
+        to right,
+        #25c389 0%,
+        #25c389 20%,
+        #ffb901 20%,
+        #ffb901 40%,
+        #de6262 40%,
+        #de6262 60%,
+        #1691bd 60%,
+        #1691bd 80%,
+        #166ba2 80%,
+        #166ba2 100%
+    );
 }
 
 .page__footer__container {
