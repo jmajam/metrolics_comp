@@ -646,14 +646,25 @@ textarea {
     font-family: 400;
     font-size: 12px;
     text-align: left;
+    width: 70%;
     margin-bottom: 0;
+    position: relative;
+    padding-bottom: 0.5rem;
 }
 
-.founder__text__line {
-    width: 21%;
-    border: none;
-    border-top: 4px solid #ffb901;
-    margin-top: 0.5rem;
+.founder__text__container {
+    padding-bottom: 1rem;
+}
+
+.founder__description::after {
+    content: "";
+    position: absolute;
+    left: 7%;
+    bottom: 0;
+    width: 15%;
+    height: 3px;
+    background: #ffb901;
+    transform: translate(-50%, 50%);
 }
 
 /* Footer */
