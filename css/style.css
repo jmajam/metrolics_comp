@@ -265,7 +265,6 @@ textarea {
 
 .col {
     position: relative;
-    background-color: rgb(242, 230, 177);
 }
 
 /* 2.2 Small only */
@@ -631,15 +630,7 @@ textarea {
 }
 
 /* Portfolio */
-
-.portfolio__post__container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    row-gap: 1rem;
-}
 .portfolio__post {
-    width: 31%;
     aspect-ratio: 5 / 4;
 }
 .portfolio__post__image {
