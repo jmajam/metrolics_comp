@@ -566,15 +566,7 @@ textarea {
 
 /* Latest Work */
 
-.latestWork__post__container {
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-}
-
 .latestWork__post {
-    width: 31%;
-    aspect-ratio: 5 / 4;
     position: relative;
 }
 
@@ -621,8 +613,8 @@ textarea {
 }
 
 .post__BG__Icon {
-    width: 28px;
-    height: 28px;
+    width: 12%;
+    height: 12%;
 }
 
 .latestWork__post__title__container {
