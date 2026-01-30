@@ -250,6 +250,31 @@ textarea {
     }
 }
 
+:root {
+    /* colors */
+    --white: #fff;
+    --black: #000;
+    --gray-100: #ebebeb;
+    --gray-400: #a3a3a3;
+
+    --green: #25c389;
+    --green-dark: #21c183;
+    --blue: #19b2de;
+    --blue-dark: #186aa2;
+    --red: #de6262;
+    --yellow: #ffb901;
+    --navy: #0e2e4e;
+
+    /* fonts */
+    --font-primary: "Ubuntu", sans-serif;
+    --font-secondary: "Noto Sans", sans-serif;
+    --font-alt: "Open Sans", sans-serif;
+
+    /* layout */
+    --page-width: 70%;
+    --radius-sm: 4px;
+}
+
 /* ==========================================================================
    2. LAYOUT
    ========================================================================== */
