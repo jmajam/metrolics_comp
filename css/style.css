@@ -85,45 +85,6 @@ textarea {
     resize: vertical;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-    display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visually-hidden {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    /* 1 */
-}
-
 /*
  * Extends the .visually-hidden class to allow the element
  * to be focusable when navigated to via the keyboard:
@@ -139,31 +100,6 @@ textarea {
     position: static;
     white-space: inherit;
     width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-    content: "";
-    display: table;
-}
-
-.clearfix::after {
-    clear: both;
 }
 
 /* ==========================================================================
@@ -251,73 +187,235 @@ textarea {
 }
 
 :root {
-    --main-bg-color: #ffffff;
+    /* colors */
+    --white: #fff;
+    --black: #000;
+    --gray-100: #ebebeb;
+    --gray-400: #a3a3a3;
+
+    --green: #25c389;
+    --green-dark: #21c183;
+    --blue: #19b2de;
+    --blue-dark: #186aa2;
+    --red: #de6262;
+    --yellow: #ffb901;
+    --navy: #0e2e4e;
+
+    /* fonts */
+    --font-primary: "Ubuntu", sans-serif;
+    --font-secondary: "Noto Sans", sans-serif;
+    --font-alt: "Open Sans", sans-serif;
+
+    /* layout */
+    --page-width: 70%;
+    --radius-sm: 4px;
 }
 
-/* Page Layout */
+/* ==========================================================================
+   HELPERS
+   ========================================================================== */
+
+.hidden,
+[hidden] {
+    display: none !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/* ==========================================================================
+   GRID
+   ========================================================================== */
+
+/* Helper to display empty layout containers*/
+
+/* 2.1 Core layout */
+
+.row {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.col {
+    position: relative;
+}
+
+/* 2.2 Small only */
+
+@media screen and (max-width: 39.9375em) {
+    .s-hide {
+        display: none;
+    }
+}
+
+/* 2.3 medium and up */
+
+@media screen and (min-width: 40em) {
+    .row {
+        max-width: 70rem;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+        margin: 0 auto;
+    }
+    .grid {
+        display: grid;
+        column-gap: 0.5rem;
+        row-gap: 0.5rem;
+    }
+    .m-col-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .m-col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .m-col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .m-col-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .m-1-2 {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+/* 2.4 Medium only */
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .m-row-span {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    .m-hide {
+        display: none;
+    }
+}
+
+/* 2.5 large screens and up 2.6 Large only */
+
+@media screen and (min-width: 64em) {
+    .l-col-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .l-col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .l-col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .l-col-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .l-col-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .l-row-span {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    .l-hide {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   PAGE LAYOUT
+   ========================================================================== */
+
 .page {
-    background-color: var(--main-bg-color);
+    background: var(--white);
 }
 
-/* Navigation Bar */
+.page__header__navbar,
+.page__main__content,
+.page__footer__content,
+.imageWrapper {
+    width: var(--page-width);
+    margin: 0 auto;
+}
+
+.page__main__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page__main__content > * {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
 .page__header__navbar {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
     height: 96px;
-    width: 70%;
-    margin: 0 auto;
 }
 
 .page__header__logo {
     display: flex;
     align-items: flex-end;
-    height: 100%;
     gap: 0.5rem;
 }
 
 .page__header__logo img {
-    display: block;
     width: 177px;
-    align-self: flex-end;
 }
 
-/* Menu List */
 .page__header__navbar ul {
     display: flex;
-    height: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 500;
     font-size: 16px;
-    color: white;
+    font-weight: 500;
+    color: var(--white);
 }
 
 .page__header__navbar li {
     display: flex;
     align-items: flex-end;
-    height: 100%;
     padding: 0 1rem;
-    box-sizing: border-box;
 }
 
-/* Menu Item Colors */
 .page__header__navbar li:nth-child(1) {
-    background-color: #25c389;
+    background: var(--green);
 }
 .page__header__navbar li:nth-child(2) {
-    background-color: #ffb901;
+    background: var(--yellow);
 }
 .page__header__navbar li:nth-child(3) {
-    background-color: #de6262;
+    background: var(--red);
 }
 .page__header__navbar li:nth-child(4) {
-    background-color: #19b2de;
+    background: var(--blue);
 }
 .page__header__navbar li:nth-child(5) {
-    background-color: #265787;
+    background: #265787;
 }
 
 /* Header Carousel */
@@ -405,8 +503,6 @@ textarea {
     color: #1eafde;
 }
 
-/* Services */
-
 /* Headers */
 .header {
     font-family: "Ubuntu", sans-serif;
@@ -444,7 +540,7 @@ textarea {
 
 /* Services */
 .services__card__image {
-    width: 84px;
+    width: 40%;
 }
 
 .services__card__heading {
@@ -463,31 +559,16 @@ textarea {
     margin: 0 auto;
 }
 
-.services__card__container {
-    display: flex;
-    justify-content: space-around;
-}
-
 .services__card {
-    width: 22%;
     text-align: justify;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
 }
 
 /* Latest Work */
 
-.latestWork__post__container {
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-}
-
 .latestWork__post {
-    width: 31%;
-    aspect-ratio: 5 / 4;
     position: relative;
 }
 
@@ -534,8 +615,8 @@ textarea {
 }
 
 .post__BG__Icon {
-    width: 28px;
-    height: 28px;
+    width: 12%;
+    height: 12%;
 }
 
 .latestWork__post__title__container {
@@ -552,15 +633,7 @@ textarea {
 }
 
 /* Portfolio */
-
-.portfolio__post__container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    row-gap: 1rem;
-}
 .portfolio__post {
-    width: 31%;
     aspect-ratio: 5 / 4;
 }
 .portfolio__post__image {
@@ -569,13 +642,7 @@ textarea {
 }
 
 /* Previous Clients */
-.previousClients__container {
-    display: flex;
-    justify-content: space-between;
-}
-
 .previousClients__post {
-    width: 17%;
     aspect-ratio: 1.4/1;
 }
 
@@ -589,6 +656,29 @@ textarea {
     background-color: #0e2e4e;
     color: white;
     position: relative;
+    padding-bottom: 2rem;
+}
+
+.page__footer::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 15rem;
+    height: 1rem;
+    background: linear-gradient(
+        to right,
+        #25c389 0%,
+        #25c389 20%,
+        #ffb901 20%,
+        #ffb901 40%,
+        #de6262 40%,
+        #de6262 60%,
+        #1691bd 60%,
+        #1691bd 80%,
+        #166ba2 80%,
+        #166ba2 100%
+    );
 }
 
 .page__footer__container {
@@ -623,20 +713,29 @@ textarea {
     font-family: 400;
     font-size: 12px;
     text-align: left;
+    width: 70%;
     margin-bottom: 0;
+    position: relative;
+    padding-bottom: 0.5rem;
 }
 
-.founder__text__line {
-    width: 21%;
-    border: none;
-    border-top: 4px solid #ffb901;
-    margin-top: 0.5rem;
+.founder__text__container {
+    padding-bottom: 1rem;
+}
+
+.founder__description::after {
+    content: "";
+    position: absolute;
+    left: 7%;
+    bottom: 0;
+    width: 15%;
+    height: 3px;
+    background: #ffb901;
+    transform: translate(-50%, 50%);
 }
 
 /* Footer */
 .footer__information {
-    display: flex;
-    justify-content: space-between;
     margin-top: 1.5em;
     margin-bottom: 0.5rem;
 }
@@ -691,11 +790,6 @@ textarea {
     border-top: 12px solid #ffb901;
 }
 /* About us */
-
-.footer__information__aboutUs {
-    width: 22%;
-}
-
 .footer__information__aboutUs__text {
     font-family: "Ubuntu", sans-serif;
     font-family: 400;
@@ -703,10 +797,6 @@ textarea {
 }
 
 /* Instagram */
-.footer__information__instagram {
-    width: 22%;
-}
-
 .footer__information__instagram__post {
     width: 27%;
     margin: 1% 0;
@@ -714,9 +804,6 @@ textarea {
 }
 
 /* Mastodon */
-.footer__information__newMastodon {
-    width: 31%;
-}
 .footer__information__newMastodon__author {
     color: #1bade6;
 }
@@ -727,10 +814,6 @@ textarea {
 }
 
 /* Track Us */
-.footer__information__trackUs {
-    width: 14%;
-}
-
 .footer__information__trackUs__social__container {
     display: flex;
     flex-wrap: wrap;
