@@ -639,13 +639,7 @@ textarea {
 }
 
 /* Previous Clients */
-.previousClients__container {
-    display: flex;
-    justify-content: space-between;
-}
-
 .previousClients__post {
-    width: 17%;
     aspect-ratio: 1.4/1;
 }
 
