@@ -836,6 +836,9 @@ textarea {
         column-gap: 0.5rem;
         row-gap: 0.5rem;
     }
+    .latestWork__post__container {
+        padding: 0 0.6rem;
+    }
 }
 
 /* 2.3 medium and up */
