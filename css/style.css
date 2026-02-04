@@ -245,101 +245,6 @@ textarea {
 }
 
 /* ==========================================================================
-   GRID
-   ========================================================================== */
-
-/* Helper to display empty layout containers*/
-
-/* 2.1 Core layout */
-
-.row {
-    display: grid;
-    row-gap: 1rem;
-}
-
-.col {
-    position: relative;
-}
-
-/* 2.2 Small only */
-
-@media screen and (max-width: 39.9375em) {
-    .s-hide {
-        display: none;
-    }
-}
-
-/* 2.3 medium and up */
-
-@media screen and (min-width: 40em) {
-    .row {
-        max-width: 70rem;
-        column-gap: 1.5rem;
-        row-gap: 1.5rem;
-        margin: 0 auto;
-    }
-    .grid {
-        display: grid;
-        column-gap: 0.5rem;
-        row-gap: 0.5rem;
-    }
-    .m-col-2 {
-        grid-template-columns: 1fr 1fr;
-    }
-    .m-col-3 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .m-col-4 {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .m-col-5 {
-        grid-template-columns: repeat(5, 1fr);
-    }
-    .m-1-2 {
-        grid-template-columns: 1fr 2fr;
-    }
-}
-
-/* 2.4 Medium only */
-
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
-    .m-row-span {
-        grid-column-start: 1;
-        grid-column-end: -1;
-    }
-    .m-hide {
-        display: none;
-    }
-}
-
-/* 2.5 large screens and up 2.6 Large only */
-
-@media screen and (min-width: 64em) {
-    .l-col-2 {
-        grid-template-columns: 1fr 1fr;
-    }
-    .l-col-3 {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .l-col-4 {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .l-col-5 {
-        grid-template-columns: repeat(5, 1fr);
-    }
-    .l-col-6 {
-        grid-template-columns: repeat(6, 1fr);
-    }
-    .l-row-span {
-        grid-column-start: 1;
-        grid-column-end: -1;
-    }
-    .l-hide {
-        display: none;
-    }
-}
-
-/* ==========================================================================
    PAGE LAYOUT
    ========================================================================== */
 
@@ -874,4 +779,131 @@ textarea {
     cursor: pointer;
     font-size: 11px;
     line-height: 1;
+}
+
+/* ==========================================================================
+   GRID
+   ========================================================================== */
+
+/* Helper to display empty layout containers*/
+
+/* 2.1 Core layout */
+
+.row {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.col {
+    position: relative;
+}
+
+/* 2.2 Small only */
+
+@media screen and (max-width: 39.9375em) {
+    .s-hide {
+        display: none;
+    }
+    .page__header__navbar,
+    .page__main__content,
+    .page__footer__content,
+    .imageWrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .services__card__heading {
+        text-align: left;
+    }
+    .services__card__content {
+        margin-left: 0.5rem;
+    }
+
+    .services__card {
+        text-align: justify;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 0.6rem;
+    }
+    .row {
+        max-width: 70rem;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+        margin: 0 auto;
+    }
+    .grid {
+        display: grid;
+        column-gap: 0.5rem;
+        row-gap: 0.5rem;
+    }
+}
+
+/* 2.3 medium and up */
+
+@media screen and (min-width: 40em) {
+    .row {
+        max-width: 70rem;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+        margin: 0 auto;
+    }
+    .grid {
+        display: grid;
+        column-gap: 0.5rem;
+        row-gap: 0.5rem;
+    }
+    .m-col-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .m-col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .m-col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .m-col-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .m-1-2 {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+/* 2.4 Medium only */
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .m-row-span {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    .m-hide {
+        display: none;
+    }
+}
+
+/* 2.5 large screens and up 2.6 Large only */
+
+@media screen and (min-width: 64em) {
+    .l-col-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .l-col-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .l-col-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .l-col-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .l-col-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .l-row-span {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    .l-hide {
+        display: none;
+    }
 }
