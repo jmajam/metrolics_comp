@@ -835,7 +835,7 @@ textarea {
     .row {
         max-width: 70rem;
         column-gap: 1.5rem;
-        row-gap: 1.5rem;
+        row-gap: 1rem;
         margin: 0 auto;
     }
     .grid {
