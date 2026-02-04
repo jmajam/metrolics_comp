@@ -848,6 +848,10 @@ textarea {
     .founder__description {
         width: 90%;
     }
+    .founder__description::after {
+        width: 50%;
+        left: 25%;
+    }
     .founder__image {
         align-self: flex-start;
         margin-top: 0.2rem;
@@ -858,6 +862,11 @@ textarea {
         margin-left: auto;
         margin-right: 1em;
     }
+    .page__footer::after {
+        left: 50%;
+        width: 90%;
+        transform: translateX(-50%);
+        height: 0.5rem;
 }
 
 /* 2.3 medium and up */
