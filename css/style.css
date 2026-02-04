@@ -862,11 +862,15 @@ textarea {
         margin-left: auto;
         margin-right: 1em;
     }
+    .footer__information__newMastodon {
+        padding: 0 0.6rem;
+    }
     .page__footer::after {
         left: 50%;
         width: 90%;
         transform: translateX(-50%);
         height: 0.5rem;
+    }
 }
 
 /* 2.3 medium and up */
