@@ -842,6 +842,16 @@ textarea {
     .portfolio__post__container {
         padding: 0 0.6rem;
     }
+    .founder {
+        width: 100%;
+    }
+    .founder__description {
+        width: 90%;
+    }
+    .founder__image {
+        align-self: flex-start;
+        margin-top: 0.2rem;
+    }
 }
 
 /* 2.3 medium and up */
