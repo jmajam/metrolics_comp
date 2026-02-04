@@ -815,6 +815,9 @@ textarea {
         padding: 0 0.6rem;
         height: 2rem;
     }
+    .introduction {
+        width: 100%;
+    }
     .services__card__heading {
         text-align: left;
     }
