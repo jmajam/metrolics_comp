@@ -291,7 +291,7 @@ textarea {
     width: 177px;
 }
 
-.page__header__navbar ul {
+.nav__ul {
     display: flex;
     margin: 0;
     padding: 0;
@@ -810,6 +810,10 @@ textarea {
     .imageWrapper {
         width: 100%;
         margin: 0 auto;
+    }
+    .page__header__navbar {
+        padding: 0 0.6rem;
+        height: 2rem;
     }
     .services__card__heading {
         text-align: left;
