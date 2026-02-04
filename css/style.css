@@ -839,6 +839,9 @@ textarea {
     .latestWork__post__container {
         padding: 0 0.6rem;
     }
+    .portfolio__post__container {
+        padding: 0 0.6rem;
+    }
 }
 
 /* 2.3 medium and up */
