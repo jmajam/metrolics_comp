@@ -885,8 +885,8 @@ textarea {
 @media screen and (min-width: 40em) {
     .row {
         max-width: 70rem;
-        column-gap: 1.5rem;
-        row-gap: 1.5rem;
+        column-gap: 0.5rem;
+        row-gap: 0.5rem;
         margin: 0 auto;
     }
     .grid {
@@ -908,18 +908,6 @@ textarea {
     }
     .m-1-2 {
         grid-template-columns: 1fr 2fr;
-    }
-}
-
-/* 2.4 Medium only */
-
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
-    .m-row-span {
-        grid-column-start: 1;
-        grid-column-end: -1;
-    }
-    .m-hide {
-        display: none;
     }
     .page__header__navbar {
         width: 100%;
@@ -946,6 +934,21 @@ textarea {
         flex: 1;
         justify-content: center;
         padding: 0.75rem 0;
+    }
+    .latestWork__post:first-child {
+        grid-column: span 2;
+    }
+
+    .latestWork__post__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+    .previousClients__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        align-items: center;
     }
 }
 
@@ -978,29 +981,6 @@ textarea {
 
 .services__card__image {
     width: 45%;
-}
-
-.latestWork__post__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-}
-
-.latestWork__post:first-child {
-    grid-column: span 2;
-}
-
-.portfolio__post__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
-
-.previousClients__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    align-items: center;
 }
 
 .founder {
@@ -1051,5 +1031,23 @@ textarea {
     }
     .l-hide {
         display: none;
+    }
+
+    .portfolio__post__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    .latestWork__post__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .previousClients__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        align-items: center;
     }
 }
